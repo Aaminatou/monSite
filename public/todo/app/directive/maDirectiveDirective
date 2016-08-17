@@ -1,0 +1,76 @@
+var module = angular.module("Application");
+
+module.directive("maDirective",function () {
+    
+    return {
+        restrict:"A",
+        //template:"<blockquote>Bonjour {{$parent.hello}}<b ng-transclude></b></blockquote>",
+        //template:"<blockquote ng-click = 'clique();'>Bonjour {{nom}}<b ng-transclude></b></blockquote>",
+        //template: "<table><tr><th>NOM</th><th>PRENOM</th><th>AGE</th></tr><tr ng-repeat='item in personnes' ng-click = 'clique(item.nom,item.prenom,item.age);'><td>{{ item.nom }}</td><td>{{item.prenom}}</td><td>{{item.age}}</td></tr></table>",
+        templateUrl:"./app/template/template.html",
+        //replace:false,
+        transclude:true,
+        //scope:true, //pour ne pas modifier le scope parent
+        //scope:{}, //il n ya plus de héritage, on isole le scope
+        scope:{
+            //nom:'@'//one way nom = modele dans le scope
+            //nom:"="// two ways (égal au parent) ng-model = modele sdans le scope
+        },
+        link:function (scope,elem,attrs,ctrl) {
+            //scope.hello = 'yop';
+            //scope.hello = scope.hello + 1;
+        },
+        controller:function($scope,$http){
+           var personne1 = {
+                "nom":"GUS",
+                "prenom":"1gars",
+                "age":86
+            }
+            var personne2 = {
+                "nom":"GUSFJR",
+                "prenom":"ytrzk",
+                "age":45
+            }
+            var personne3 = {
+                "nom":"ETUUS",
+                "prenom":"tyii",
+                "age":16
+            }
+            var personne4 = {
+                "nom":"GRYJ",
+                "prenom":"ruus",
+                "age":26
+            }
+            var personne5 = {
+                "nom":"SERT",
+                "prenom":"tieks",
+                "age":64
+            }
+            var personne6 = {
+                "nom":"RII",
+                "prenom":"knlqdfkhjp",
+                "age":56
+            }
+            var personne7 = {
+                "nom":"GYT",
+                "prenom":"kflnlhf",
+                "age":52
+            }
+            var personne8 = {
+                "nom":"GRUS",
+                "prenom":"ehju",
+                "age":68
+            }
+            var personne9 = {
+                "nom":"GUST",
+                "prenom":"leryl",
+                "age":64
+            }
+            $scope.personnes = [personne1,personne2,personne3,personne4,personne5,personne6,personne7,personne8,personne9];
+            $scope.clique = function (nom,prenom,age) {
+                console.log("Vous avez cliqué sur : "+nom+" "+prenom+" "+age+" ans.");
+            }
+        }
+
+    };
+});

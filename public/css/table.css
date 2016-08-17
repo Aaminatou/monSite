@@ -1,0 +1,18 @@
+table,tr,td,tbody,thead{
+    border:collapse;
+    margin:collapse;
+    padding:collapse;
+    text-align: center;
+}
+th{
+    background-color: darkblue;
+    color:white;
+}
+tr:nth-child(odd){
+    background-color: lightblue;
+    color:black;
+}
+tr:nth-child(even){
+    background-color: lightgreen;
+    color:black;
+}

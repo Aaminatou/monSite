@@ -1,0 +1,15 @@
+[{
+    "tache":"manger",
+    "effectuee":"oui"
+   
+},
+{
+    "tache":"boire",
+    "effectuee":"non"
+ 
+},
+{
+    "tache":"shopping",
+    "effectuee":"non"
+ 
+}]

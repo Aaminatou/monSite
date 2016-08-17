@@ -1,0 +1,39 @@
+header{
+        background-color: sandybrown;
+}
+header div{
+        display:inline-block;
+        margin: auto;             
+        width: 100%; 
+        text-align: center;
+        }
+
+ header img{
+     display:none;
+     
+    }
+
+    footer{
+                    
+         text-align: center;
+
+         }
+        h1,h2{
+     color: darkred;
+     border:  1px solid black;
+     font-size: 100%;
+     background-color: olive;
+     text-align: center;
+                }
+div[list=menu]{
+
+    border-bottom: 4px  dotted grey;
+
+}
+
+h1::before{
+        content:">>";
+}
+h1::after{
+        content:"<<";
+}
